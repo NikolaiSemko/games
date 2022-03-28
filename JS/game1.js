@@ -16,6 +16,8 @@
     let life = 100;
     let score = 0;
     let gameOver = false;
+    var img = new Image();
+    img.src = "./Images/space.jpg";
 
     class Enemy {
         constructor() {
@@ -86,13 +88,13 @@
     function init() {
         w = canvas.width = innerWidth;
         h = canvas.height = innerHeight;
-        ctx.font = (0.001 * w).toFixed(1).toString() + "vw Turret Road";
+        ctx.font = (0.02 * w).toFixed(1).toString() + "px Turret Road";
         ctx.textAlign = "left";
     }
     function resize() {
         w = canvas.width = innerWidth;
         h = canvas.height = innerHeight;
-        ctx.font = (0.001 * w).toFixed(1).toString() + "vw Turret Road";
+        ctx.font = (0.02 * w).toFixed(1).toString() + "px Turret Road";
     }
     function reDraw() {
         for (let i = 0; i < enemy.length; i++) {
@@ -128,9 +130,9 @@
                     gameOver = true;
                     ctx.fillStyle = "#FF0080FF";
                     ctx.textAlign = "center";
-                    ctx.font = (0.004 * w).toFixed(1).toString() + "vw Turret Road";
+                    ctx.font = (0.08 * w).toFixed(1).toString() + "px Turret Road";
                     ctx.fillText('Game Over', w / 2, h / 2);
-                    ctx.font = (0.001 * w).toFixed(1).toString() + "vw Turret Road";
+                    ctx.font = (0.02 * w).toFixed(1).toString() + "px Turret Road";
                     ctx.textAlign = "left";
 
                 }
@@ -160,7 +162,8 @@
     function loop() {
         if (gameOver) return;
         ctx.fillStyle = "#000040FF";
-        ctx.fillRect(0, 0, w, h);
+        //ctx.fillRect(0, 0, w, h);
+        ctx.drawImage(img, 0, 0);
         let now = new Date();
         if (last == 0) last = now;
         if (last2 == 0) last2 = now;
