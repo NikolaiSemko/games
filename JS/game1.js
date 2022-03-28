@@ -162,8 +162,11 @@
     function loop() {
         if (gameOver) return;
         ctx.fillStyle = "#000040FF";
-        //ctx.fillRect(0, 0, w, h);
-        ctx.drawImage(img, 0, 0);
+        if (w <= 1920 && h <= 1080) {
+            ctx.drawImage(img, 0, 0);
+        } else {
+            ctx.fillRect(0, 0, w, h);
+        }
         let now = new Date();
         if (last == 0) last = now;
         if (last2 == 0) last2 = now;
