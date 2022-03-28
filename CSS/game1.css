@@ -1,1 +1,14 @@
+body {
+    margin: 0%;
+    overflow: hidden;
+    background: rgb(0, 0, 0);
+}
+img {
+    position: absolute;
+    width: 10%;
+    left: 45%;
+    top: calc(50% - 7.07vw);
+    caret-color: rgba(0,0,0,0);   
+    pointer-events: none;
 
+}
