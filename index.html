@@ -5,20 +5,81 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Space Shooter</title>
-    <link rel="stylesheet" href="CSS/game1.css">
+    <meta name="author" content="Group 10: John Widjaya, Yun Han, Pardeep Kaur, Nikolai Semko">
     <link rel="shortcut icon" type="image/png" href="Images/logo.ico" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Turret+Road&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/style.css">
+
+    <title>Game Portal</title>
 </head>
 
 <body>
-    <canvas></canvas>
-
-    <img src="Images/spaceship_blue.svg" alt="spaceship">
-
-    <script src="JS/game1.js"></script>
+    <div class="grid">
+        <header>
+            <div id = "theme">Theme: dark</div>
+            <a href="registration.html">
+                <div class="buttons">
+                    Registration
+                    <img class="icon2" src="images/reg.svg" alt="Registration" />
+                </div>
+            </a>
+            <a href="login.html">
+                <div class="buttons">
+                    Log In
+                    <img class="icon2" src="images/logIn.svg" alt="Log In" />
+                </div>
+            </a>
+            <a href="about.html">
+                <div class="buttons">
+                    About Us
+                    <img class="icon2" src="Images/about.svg" alt="About us" />
+                </div>
+            </a>
+            <a href="index.html">
+                <div class="buttons">
+                    Home
+                    <img class="icon2" src="Images/home.svg" alt="logo" />
+                </div>
+            </a>
+            <img class="logo" src="Images/logo.svg" alt="Logo" />
+        </header>
+        <main class="grid2">
+            <div class="games" id="game1">
+                <a href="game1.html">
+                    <p>Space Shooter</p>
+                    <img  class = "game_image" src="Images/game1.png" alt="Space Shooter" />                
+                </a>
+            </div>
+            <div class="games" id="game2">
+                <a href="game1.html">
+                    <p>Space Shooter</p>
+                    <img  class = "game_image" src="Images/game1.png" alt="Space Shooter" />                
+                </a>
+            </div>
+            <div class="games" id="game3">
+                <a href="game1.html">
+                    <p>Space Shooter</p>
+                    <img  class = "game_image" src="Images/game1.png" alt="Space Shooter" />                
+                </a>
+            </div>
+            <div class="games" id="game4">
+                <a href="game1.html">
+                    <p>Space Shooter</p>
+                    <img  class = "game_image" src="Images/game1.png" alt="Space Shooter" />                
+                </a>
+            </div>
+        </main>
+        <footer>
+            <a href="about.html">
+                <img class="icon" src="images/about.svg" alt="About us" />
+            </a>
+            <a href="index.html">
+                <img class="icon" src="images/home.svg" alt="Home" />
+            </a>
+            <img class="logo" src="Images/logo.svg" alt="BeeXXI Logo" />
+        </footer>
+    </div>
+    <script src="JS/jquery-3.6.0.min.js"></script>
+    <script src="JS/app.js"></script>
 </body>
 
 </html>
