@@ -21,7 +21,7 @@
         constructor() {
             this.ang = Math.random() * Math.PI * 2;
             this.max = Math.sqrt(w * w / 4 + h * h / 4);
-            this.speed = 0.005 + 0.025 * (1 - coef) + Math.random() * 0.01;
+            this.speed = 0.005 + 0.015 * (1 - coef) + Math.random() * 0.01;
             let xx = w / 2 + Math.cos(this.ang) * this.max;
             let yy = h / 2 + Math.sin(this.ang) * this.max;
             this.start = { x: xx, y: yy };
