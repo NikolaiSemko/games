@@ -1,0 +1,10 @@
+body{
+    margin:0;
+    background-color: #502B0F;
+    padding:10px 20px;
+} 
+
+#game-container {
+    display: flex;
+    justify-content: center;
+}

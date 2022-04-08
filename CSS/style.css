@@ -1,4 +1,4 @@
-html, body {
+body {
     height: 100%;
     margin: 0;
     /* overflow: hidden; */
@@ -64,14 +64,18 @@ footer {
     /* background-color: rgba(0, 0, 255, 0.534); */
     transition: 0.7s;
     color: rgba(255, 255, 255, 0.548);
+    height: auto;
 }
+
 .grid2>div>a {
     color: rgba(255, 255, 255, 0.548);
 }
+
 .grid2>div>a:hover {
     color: rgb(63, 113, 250);
     transition: 0.7s;
 }
+
 .grid2 {
     height: 90%;
     display: grid;
@@ -94,6 +98,7 @@ footer {
     width: 70%;
     transition: 0.7s;
 }
+
 .game_image:hover {
     border-radius: 10px;
     box-shadow: 15px 15px 20px rgb(0, 0, 0);
@@ -108,6 +113,7 @@ footer {
     transform: translateY(30%);
     transition: 0.3s;
 }
+
 .icon2 {
     height: 30px;
     margin-left: 10px;
@@ -118,18 +124,79 @@ footer {
     float: right;
     color: rgb(63, 113, 250);
     text-shadow: 2px 2px 5px rgb(0, 0, 0);
-    margin: 25px 100px 15px 15px;
+    margin: 25px 25px 15px 15px;
     padding: 5px;
     font-weight: 100;
 }
 
+.form {
+    position: relative;
+    /* width: 300px; */
+}
+
+.newUser {
+    margin: 22px 25px 15px 15px;
+    padding: 5px;
+    float: right;
+}
+
+::placeholder {
+    color: rgb(255, 255, 255);
+    /* Firefox */
+}
+.reg::placeholder {
+    color: rgb(0, 0, 0);
+    /* Firefox */
+}
+.reg {
+    color: rgb(0, 0, 0);
+    /* Firefox */
+}
+
+.newUser input, .newUser button {
+    border: none;
+    outline: none;
+    border-radius: 3px;
+}
+.newUser button {
+    margin-top: 4px;
+    margin-right: 4px;
+}
+
+.newUser input {
+    width: 95%;
+    height: 28px;
+    background: #696969;
+    padding-left: 15px;
+}
+
+.newUser button {
+    height: 20px;
+    width: 40px;
+    color: rgb(193, 210, 255);
+    box-shadow: 2px 2px 4px rgb(0, 0, 0);
+    position: absolute;
+    top: 6px;
+    right: 0px;
+    background: #4d4d4d;
+    cursor: pointer;
+}
+
+.newUser button:before {
+    /* font-family: 'Tahoma';
+    content: "\f105"; */
+    color: #8d9cff;
+    font-size: 20px;
+    font-weight: bold;
+}
+
 .buttons {
     background-color: rgba(33, 33, 133, 0);
-    text-shadow: 2px 2px 5px rgb(0, 0, 0);
+    text-shadow: 2px 2px 3px rgb(0, 0, 0);
     color: rgb(63, 113, 250);
     border-radius: 7px;
     float: right;
-    margin: 25px 100px 15px 15px;
+    margin: 25px 25px 15px 15px;
     padding: 5px;
     font-weight: 100;
     transition: 0.3s;
@@ -139,7 +206,7 @@ footer {
     transform: scale(1.2) translateY(-5px);
     transition: 0.3s;
     cursor: pointer;
-    box-shadow: 5px 5px 10px rgb(0, 0, 0);
+    box-shadow: 4px 4px 6px rgb(0, 0, 0);
     background-color: rgba(255, 255, 255, 0);
 }
 
@@ -168,7 +235,8 @@ header:hover {
     transform: translateY(-1%);
     transition: 0.3s;
 }
-header:hover h2{
+
+header:hover h2 {
     font-size: 36px;
     transition: 0.3s;
     margin: 20px;
