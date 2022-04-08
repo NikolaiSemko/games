@@ -70,15 +70,6 @@
         fill ? ctx.fill() : ctx.stroke();
     }
 
-    function createCircle2(x, y, r, fill, color) {
-        ctx.fillStyle = ctx.strokeStyle = color;
-        ctx.filter = "blur(2px)";
-        ctx.beginPath();
-        ctx.arc(x, y, r, 0, Math.PI * 2);
-        //ctx.closePath();
-        fill ? ctx.fill() : ctx.stroke();
-    }
-
     function rotateShip({ layerX, layerY }) {
         ang = Math.atan((layerY - h / 2) / (layerX - w / 2)) + PI6;
         if (layerX < w / 2) ang += Math.PI;
@@ -134,7 +125,6 @@
                     ctx.fillText('Game Over', w / 2, h / 2);
                     ctx.font = (0.02 * w).toFixed(1).toString() + "px Turret Road";
                     ctx.textAlign = "left";
-
                 }
             }
             x = enemy[i].cur.x - enemy[i].start.x;
@@ -161,7 +151,7 @@
     }
     function loop() {
         if (gameOver) return;
-        ctx.fillStyle = "#000040FF";
+        ctx.fillStyle = "#000020FF";
         if (w <= 1920 && h <= 1080) {
             ctx.drawImage(img, 0, 0);
         } else {
