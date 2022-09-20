@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Barlow|Tomorrow:400,700&display=swap");
 body {
     height: 100%;
     margin: 0;
@@ -8,7 +9,7 @@ body {
 .grid {
     height: 100%;
     display: grid;
-    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    font-family: Tomorrow, sans-serif;
     font-weight: 200;
     grid-template-columns: 1fr;
     grid-template-rows: 70px 1fr 70px;
@@ -35,6 +36,7 @@ header {
 
 main {
     grid-area: main;
+
 }
 
 footer {
@@ -69,8 +71,11 @@ footer {
 
 .grid2>div>a {
     color: rgba(255, 255, 255, 0.548);
+    
 }
-
+.grid2>div>a:link{
+    text-decoration: none;
+}
 .grid2>div>a:hover {
     color: rgb(63, 113, 250);
     transition: 0.7s;
@@ -84,9 +89,31 @@ footer {
     grid-template-rows: 1fr 1fr;
     text-align: center;
     font-size: 22px;
-    font-family: sans-serif;
+    font-family: Tomorrow, sans-serif;
     grid-gap: 3vw;
 }
+@media (max-width: 867px) {
+    .grid2 {
+        height: 90%;
+        display: grid;
+        margin: 3vw;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1 fr;
+        text-align: center;
+        font-size: 22px;
+        font-family: Tomorrow, sans-serif;
+        grid-gap: 3vw;
+    }
+}
+.rowall {
+    display: flex;
+    flex-flow: wrap;
+}
+.col1, .col2, .col3, .col4 { width: 100%;}
+.col1 {order: 0;}
+.col2 {order: 1;}
+.col3 {order: 2;}
+.col4 {order: 3;}
 
 /* .grid2>div {
     width: 70%;
@@ -127,6 +154,7 @@ footer {
     margin: 25px 25px 15px 15px;
     padding: 5px;
     font-weight: 100;
+    font-family: Tomorrow, sans-serif;
 }
 
 .form {
@@ -154,6 +182,7 @@ footer {
 }
 
 .newUser input, .newUser button {
+    font-family: Tomorrow, sans-serif;
     border: none;
     outline: none;
     border-radius: 3px;
@@ -164,6 +193,7 @@ footer {
 }
 
 .newUser input {
+    font-family: Tomorrow, sans-serif;
     width: 95%;
     height: 28px;
     background: #696969;
@@ -171,6 +201,7 @@ footer {
 }
 
 .newUser button {
+    font-family: Tomorrow, sans-serif;
     height: 20px;
     width: 40px;
     color: rgb(193, 210, 255);
@@ -191,6 +222,7 @@ footer {
 }
 
 .buttons {
+    font-family: Tomorrow, sans-serif;
     background-color: rgba(33, 33, 133, 0);
     text-shadow: 2px 2px 3px rgb(0, 0, 0);
     color: rgb(63, 113, 250);
