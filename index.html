@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Group 10: John Widjaya, Yun Han, Pardeep Kaur, Nikolai Semko">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js"
+        integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/"
+        crossorigin="anonymous"></script>
     <link rel="shortcut icon" type="image/png" href="Images/logo.ico" />
     <link rel="stylesheet" href="CSS/style.css">
 
@@ -17,23 +20,12 @@
         <header>
             <div id="theme">Theme: dark</div>
             <div class="newUser form">
-                
-                    <input id ="regname" type="text" placeholder="What your name?">
-                    <button type="submit" id = "submited">Ok</button>
-               
+
+                <input id="regname" type="text" placeholder="What is your name?">
+                <button type="submit" id="submited">Ok</button>
+
             </div>
-            <!-- <a href="registration.html">
-                <div class="buttons">
-                    Registration
-                    <img class="icon2" src="Images/reg.svg" alt="Registration" />
-                </div>
-            </a>
-            <a href="login.html">
-                <div class="buttons">
-                    Log In
-                    <img class="icon2" src="Images/logIn.svg" alt="Log In" />
-                </div>
-            </a> -->
+
             <a href="about.html">
                 <div class="buttons">
                     About Us
@@ -46,28 +38,32 @@
                     <img class="icon2" src="Images/home.svg" alt="logo" />
                 </div>
             </a>
+            <div class="buttons" id = "pdf">
+                Save Results as pdf
+            </div>
             <img class="logo" src="Images/logo.svg" alt="Logo" />
         </header>
+        <!-- <main class="rowall "> -->
         <main class="grid2">
-            <div class="games" id="game1">
+            <div class="col1">
                 <a href="game1.html">
                     <p>Space Shooter</p>
                     <img class="game_image" src="Images/game1.png" alt="Space Shooter" />
                 </a>
             </div>
-            <div class="games" id="game2">
+            <div class="col2">
                 <a href="game2.html">
                     <p>Snake</p>
                     <img class="game_image" src="Images/game2.png" alt="Snake" />
                 </a>
             </div>
-            <div class="games" id="game3">
+            <div class="col3">
                 <a href="game3.html">
                     <p>Pac-Man</p>
                     <img class="game_image" src="Images/game3.png" alt="Pac-Man" />
                 </a>
             </div>
-            <div class="games" id="game4">
+            <div class="col4">
                 <a href="game4.html">
                     <p>Flappy Bird</p>
                     <img class="game_image" src="Images/game4.png" alt="Flappy Bird" />
@@ -81,11 +77,12 @@
             <a href="index.html">
                 <img class="icon" src="Images/home.svg" alt="Home" />
             </a>
-            <img class="logo" src="Images/logo.svg" alt="BeeXXI Logo" />
+            <!-- <img class="logo" src="Images/logo.svg" alt="BeeXXI Logo" /> -->
         </footer>
     </div>
-    <script src="JS/jquery-3.6.0.min.js"  defer></script>
+    <script src="JS/jquery-3.6.0.min.js" defer></script>
     <script src="JS/app.js" defer></script>
+    <script src="JS/random.js" defer></script>
 </body>
 
 </html>

@@ -4,14 +4,26 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Flappy Bird</title>
-		<link rel="stylesheet"  type="text/css" href="CSS/game4.css">
-		<!-- <link rel="stylesheet" type="text/css" href="style.css" /> -->
-		<!-- no stylesheet linked yet -->
+		<link rel="stylesheet" href="CSS/game4.css" />
 	</head>
 	<body>
-		<!-- According to MDN it is perferred to set the height and width directly here to prevent weird things happening -->
-		<canvas id="board" width="480" height="640"></canvas>
+		<div id="content-container">
+			<a href="index.html"><img id="home-button" src="./images/home.svg" alt="Home Button" /></button></a>
+			<div id="score-container">
+				<span>Score: </span><span id="scoreEl">0</span>
+			</div>
+			<div id="game-ui">
+				<div id="game-button">
+					<button id="startBtn">Start Game</button>
+					<!-- <button id="resetBtn">Restart Game</button> -->
+				</div>
+			</div>
+			<div id="game-container">
+				<!-- <img src="images/startGame.png" img id="start" onclick="startGame();" /> -->
+				<!-- According to MDN it is perferred to set the height and width directly here to prevent weird things happening -->
+				<canvas id="board" width="480" height="640"></canvas>
+			</div>
+		</div>
 	</body>
-	<script src="JS/game4.js"  defer></script>
+	<script src="JS/game4.js"></script>
 </html>
-

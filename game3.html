@@ -6,15 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Yun Han">
     <meta name="email" content="han00133@algonquinlive.com">
-    <link rel="stylesheet" type="text/css" href="CSS/game3.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="CSS/game3.css">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/gameover.css">
     <title>Pac-Man</title>
 </head>
 <body>
-<p>
-    <span>Score: </span><span id="scoreEl">0</span>
-</p>
-<p>Use 'w', 'a', 's', 'd' to move your Pac-Man!</p>
-<canvas></canvas>
+        <main>
+            <a href="index.html">
+                <div class="buttons">
+                    Home
+                </div>
+            </a>
+            <p><span>Score: </span><span id="scoreEl">0</span></p>
+            <p>Use W, A, S, D to move your Pac-Man!</p>
+            <canvas></canvas>
+            <div class="popup">
+                <button id="close">&times;</button>
+                <h1>Game Over !</h1><br><br><br>
+                <a href="game3.html">Start Again</a>
+            </div>
+        </main>
+</div>
+<script src="JS/jquery-3.6.0.min.js"  defer></script>
+<script src="JS/app.js" defer></script>
 <script src="JS/game3.js"  defer></script>
 </body>
 </html>
