@@ -1,8 +1,9 @@
 const canvas = document.querySelector('canvas')
+//create a 2d game
 const c = canvas.getContext('2d')
 
 const scoreEl = document.querySelector('#scoreEl')
-
+//the game will take the whole page
 canvas.width = innerWidth
 canvas.height = innerHeight
 
@@ -46,6 +47,7 @@ class Player {
       this.radians,
       Math.PI * 2 - this.radians
     )
+    // Canvas lineTo: begin a path of our player
     c.lineTo(this.position.x, this.position.y)
     c.fillStyle = 'yellow'
     c.fill()
@@ -407,6 +409,7 @@ function animate() {
   animationId = requestAnimationFrame(animate)
   c.clearRect(0, 0, canvas.width, canvas.height)
   //define how to go up, left, down, and right
+  //only allow user to move untill they collide the boundary
   if (keys.w.pressed && lastKey === 'w') {
     for (let i = 0; i < boundaries.length; i++) {
       const boundary = boundaries[i]
@@ -507,8 +510,21 @@ function animate() {
       if (ghost.scared) {
         ghosts.splice(i, 1)
       } else {
-        cancelAnimationFrame(animationId)
-        alert('You lose!')
+        cancelAnimationFrame(animationId);
+        function popup(){
+          this.setTimeout(
+              function open(event){
+                  document.querySelector(".popup").style.display = "block";
+              },
+              200
+          )
+      }
+      popup();
+      
+      document.getElementById("close").addEventListener
+      ("click", function(){
+              document.querySelector(".popup").style.display = "none";
+      });
       }
     }
   }
@@ -534,7 +550,7 @@ function animate() {
     ) {
       powerUps.splice(i, 1)
 
-      // make ghosts scared
+      // make ghosts scared: allow the user to eat the ghost
       ghosts.forEach((ghost) => {
         ghost.scared = true
 
@@ -549,7 +565,7 @@ function animate() {
   for (let i = pellets.length - 1; 0 <= i; i--) {
     const pellet = pellets[i]
     pellet.draw()
-
+     //when the user is collide with pellets
     if (
       Math.hypot(
         pellet.position.x - player.position.x,
@@ -665,7 +681,7 @@ function animate() {
       })
       // floor the number that only integer will be used to move the ghosts
       const direction = pathways[Math.floor(Math.random() * pathways.length)]
-
+      //change the ghosts' directions reandomly to up, down, righr, and left
       switch (direction) {
         case 'down':
           ghost.velocity.y = ghost.speed
@@ -691,7 +707,8 @@ function animate() {
       ghost.prevCollisions = []
     }
   })
-
+  // rotate the player when the user change the direction
+  //no need to rotate if the player is moving to the right
   if (player.velocity.x > 0) player.rotation = 0
   else if (player.velocity.x < 0) player.rotation = Math.PI
   else if (player.velocity.y > 0) player.rotation = Math.PI / 2
